@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://r4.wallpaperflare.com/wallpaper/541/323/816/motorcycle-cigar-shed-royal-enfield-hd-wallpaper-c8466c7a8fccb7293e5059b2b279ab20.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #fff;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #brand-logo {
+            max-width: 200px;
+            margin-bottom: 5px;
+        }
+
+        section {
+            display: flex;
+            justify-content: space-around;
+            padding: 2em;
+        }
+
+        .feature {
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        img {
+            max-width: 70%;
+            height: auto;
+            border-radius: 2px;
+        }
+
+        .about-us,
+        .services,
+        .contact-us,
+        .history,
+        .features {
+            text-align: left;
+            padding: 2em;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            margin: 1em;
+            border-radius: 10px;
+        }
+
+        nav {
+            text-align: center;
+            background-color: #333;
+            padding: 1em;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 1em;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        nav a[href^="#"] {
+            color: white;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            border-radius: 5px;
+            background-color: #555;
+            margin: 0 1em;
+        }
+
+        nav a[href^="#"]:hover {
+            background-color: #777;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <img id="brand-logo" src="Royal_Enfield_logo_new.svg.png" alt="Royal Enfield Logo">
+        </div>
+        <p style="text-align: center; font-style: italic;">Welcome to the page of Royal Enfield</p>
+    </header>
+
+    <nav>
+        <a href="#history">History</a>
+        <a href="#about-us">About Us</a>
+        <a href="#features">Features</a>
+        <a href="#services">Services</a>
+        <a href="#contact-us">Contact Us</a>
+    </nav>
+
+    <section>
+        <div class="feature">
+            <img src="sep_2019_1920x1080.jpg" alt="Feature 1 Image">
+            <h2>“Born to be wild, destined to ride.”</h2>
+        </div>
+
+        <div class="feature">
+            <img src="january-1920x1080.jpg" alt="Feature 2 Image">
+            <h2>“The sound of freedom on two wheels.”</h2>
+        </div>
+
+        <div class="feature">
+            <img src="october-1920x1080.jpg" alt="Feature 3 Image">
+            <h2>In love with the road, married to my Royal Enfield.”</h2>
+        </div>
+    </section>
+
+    <div id="history" class="history">
+        <h2><u>History</u></h2>
+        <p>The Enfield Cycle Company of Redditch, Worcestershire, England built the first Royal Enfield motorcycle in 1901. The company also manufactured bicycles, lawnmowers, and stationary engines</p>
+        <ol>
+            <li>1909: The first V-Twin motorcycle from Royal Enfield</li>
+            <li>1932: The legendary Bullet model is introduced</li>
+            <li>1949: Royal Enfield comes to India</li>
+            <li>1994: Eicher Motor Group acquires the company</li>
+        </ol>
+    </div>
+
+    <div id="about-us" class="about-us">
+        <h2><u>About Us</u></h2>
+        <br/>
+        <br/>
+        <h3>THE EARLY YEARS</h3>
+        <p>
+        When the first Royal Enfield motorcycle rolled out in 1901, it was the beginning of an endearing story that would turn into a legend by the turn of the century. Aptly christened - Made Like a Gun - the phrase epitomize the simple, resilient and dependable machines that have stood the test of time and terrain. It continues to be one of the key inspirations for everything that Royal Enfield builds.
+        </p>
+        <br/>
+        <h3>THE INDIAN CONNECTION</h3>
+    <p> The British roots of Royal Enfield got an Indian soul in 1955, when Madras Motors started manufacturing the motorcycles in Chennai. Six decades later, it has led the leisure motorcycling culture in India from the front. The iconic motorcycles have been accomplices to a thousand adventures and the dependable steed of the men in uniform. The upbeat response to the latest models is testimony to the fact that motorcycles are still trusted, loved and rode upon.</p>
+<br/>
+<h3>THE PURSUIT OF EXPLORATION</h3>
+<p>The forty bravehearts who rode their Royal Enfields to Khardung-la for the first time in 1997, set off a culture of explorations. Since then, Royal Enfield motorcycles have been allies to many such epic trips. This active pursuit to ride to new places, in a simple and unhurried manner, is what makes for Royal Enfield’s purpose of delivering pure motorcycling experience.</p>
+</div>
+
+
+    <div id="features" class="features">
+        <h2><u>Key Features</u></h2>
+        <h4>Royal Enfield motorcycles are known for their iconic design and ability to withstand almost anything. Some key features of the Royal Enfield Classic 350 include:</h4> 
+        <ol>
+            <li>Engine: 349cc BS6 engine that produces 20.2 bhp and 27 Nm of torque</li>
+            <li>Brakes: Front and rear disc brakes with an anti-locking braking system</li>
+            <li>Weight: 195 kg</li>
+            <li>Mileage: 41.55 kmpl</li>
+            <li>Top speed: 114 kmph</li>
+            <li>Riding range: 416 km</li>
+        </ol>
+
+    </div>
+
+    <div id="services" class="services">
+        <h2><u>Our Services</u></h2>
+        <ol>
+            <li>
+                Service Care 24
+                <p>A package that includes four general services, two engine oil changes, and a free first service. Customers can save 5% on parts and lubricants and 20% on labor costs.</p>
+            </li>
+            <li>
+                Roadside Assistance
+                <p>A 24/7 service that can help with motorcycle breakdowns. Customers can call 1800 2100 007 for assistance.</p>
+            </li>
+            <li>
+                Annual Maintenance Contract
+                <p>A service that offers preventive maintenance, parts replacement, and scheduled servicing.</p>
+            </li>
+            <li>
+                Free Service
+                <p>Every Royal Enfield Customer is entitled to 4 free services before 12000 kms or 12 months, whichever comes first.</p>
+            </li>
+        </ol>
+    </div>
+
+    <div id="contact-us" class="contact-us">
+        <h2><u>Contact Us</u></h2>
+        <h3>For assistance on all things Enfield, contact us at: </h3>
+        <p>Email: support@royalenfield.com</p>
+        <p>Phone: +91 (1800 210 0007)</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Royal Enfield. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
