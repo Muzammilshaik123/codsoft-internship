@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+         body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        #calculator-container {
+            border: 2px solid #bdc3c7;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            background-color: #fff;
+        }
+
+        #calculator {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 8px;
+            max-width: 100%;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        #display {
+            grid-column: span 4;
+            text-align: right;
+            padding: 15px;
+            font-size: 2em;
+            background-color: #212121;
+            color: #fff;
+            border-bottom: 1px solid #424242;
+        }
+
+        h1 {
+            text-align: center;
+            color: #424242;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 20px;
+            font-size: 1.5em;
+            cursor: pointer;
+            background-color: #424242;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        button.operator {
+            background-color: green;
+        }
+
+        button.double {
+            grid-column: span 2;
+        }
+
+        button.equals {
+            background-color: green;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+    <title>Calculator</title>
+</head>
+<body style="background-color: black;">
+    <div id="calculator-container">
+        <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Calculator</h1>
+        <div id="calculator">
+            <div id="display">0</div>
+            <button style="background-color: green;" onclick="clearMemory()" class="double">AC</button>
+            <button style="background-color: #424242;" onclick="appendToDisplay('/')" class="operator">/</button>
+            <button style="background-color: green;" onclick="backspace()">⌫</button>
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button onclick="appendToDisplay('*')" class="operator">×</button>
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button onclick="appendToDisplay('-')" class="operator">-</button>
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button onclick="appendToDisplay('+')" class="operator">+</button>
+            <button onclick="appendToDisplay('0')">0</button>
+            <button onclick="appendToDisplay('.')">.</button>
+            <button onclick="calculate()" class="double equals">=</button>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript functions
+        let display = document.getElementById('display');
+
+        function clearMemory() {
+            display.textContent = '0';
+        }
+
+        function appendToDisplay(value) {
+            if (display.textContent === '0' && value !== '.') {
+                display.textContent = value;
+            } else {
+                display.textContent += value;
+            }
+        }
+
+        function backspace() {
+            display.textContent = display.textContent.slice(0, -1);
+            if (display.textContent === '') {
+                display.textContent = '0';
+            }
+        }
+
+        function calculate() {
+            try {
+                display.textContent = eval(display.textContent);
+            } catch (error) {
+                display.textContent = 'Error';
+            }
+        }
+    </script>
+</body>
+</html>
